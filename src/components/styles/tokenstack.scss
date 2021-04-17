@@ -1,0 +1,156 @@
+.coin-name {
+  width: 2vmin;
+}
+
+.coin-name > span {
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  position: absolute;
+  top: 55%;
+  font-size: 1.25vmin;
+  font-weight: bold;
+}
+
+.coin {
+  width: 8vmin;
+  height: 8vmin;
+  border-radius: 50%;
+  margin-left: -6vmin;
+  font-size: 1.5vmin;
+  text-align: center;
+  position: relative;
+  box-shadow: -1px 1px 0px 0px rgba(192, 179, 194, 1);
+  background-image: url("../../assets/t-silk.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  &.first {
+    margin-left: 0;
+  }
+  &:hover {
+    z-index: 1;
+    opacity: 1 !important;
+  }
+}
+
+.coin-value {
+  width: 8vmin;
+  height: 8vmin;
+  display: grid;
+  font-size: 1.25vmin;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . Top Top . . ."
+    ". . . Top Top . . ."
+    ". . . . . . . ."
+    "Left Left . . . . Right Right"
+    "Left Left . . . . Right Right"
+    ". . . . . . . ."
+    ". . . Bottom Bottom . . ."
+    ". . . Bottom Bottom . . .";
+  > div {
+    border: 2px solid rgba(23, 23, 23, 0.21);
+    border-radius: 50%;
+    height: calc(2vmin - 4px);
+    padding: 0;
+    width: calc(2vmin - 4px);
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    display: flex;
+    color: white;
+    text-shadow: 1px 1px green;
+    font-weight: bold;
+  }
+
+  > .cv-top {
+    grid-area: Top;
+  }
+  > .cv-bottom {
+    grid-area: Bottom;
+  }
+  > .cv-left {
+    grid-area: Left;
+  }
+  > .cv-right {
+    grid-area: Right;
+  }
+}
+
+.coin-container {
+  /*   border-style:dashed; */
+  min-height: 9vmin;
+  position: relative;
+  padding: 1vmin 0vmin 0vmin 1vmin;
+  display: flex;
+  flex-direction: row;
+  &.silk .coin {
+    background-image: url("../../assets/t-silk.png");
+    > .coin-value > div {
+      background-color: #b84990;
+    }
+  }
+
+  &.spices .coin {
+    background-image: url("../../assets/t-spices.png");
+    > .coin-value > div {
+      background-color: #66bb6a;
+    }
+  }
+  &.leather .coin {
+    background-image: url("../../assets/t-leather.png");
+    > .coin-value > div {
+      background-color: #8c6e3f;
+    }
+  }
+  &.silver .coin {
+    background-image: url("../../assets/t-silver.png");
+    > .coin-value > div {
+      background-color: #829aa2;
+    }
+  }
+  &.gold .coin {
+    background-image: url("../../assets/t-gold.png");
+    > .coin-value > div {
+      background-color: #ffc107;
+    }
+  }
+  &.diamond .coin {
+    background-image: url("../../assets/t-diamond.png");
+    > .coin-value > div {
+      background-color: #e13e22;
+    }
+  }
+
+  &.t3 .coin {
+    background-image: url("../../assets/c-3.png");
+    > .coin-value > div {
+      background-color: #774b3d;
+      color: white;
+    }
+  }
+  &.t4 .coin {
+    background-image: url("../../assets/c-5.png");
+    > .coin-value > div {
+      background-color: #774b3d;
+      color: white;
+    }
+  }
+  &.t5 .coin {
+    background-image: url("../../assets/c-5.png");
+    > .coin-value > div {
+      background-color: #774b3d;
+      color: white;
+    }
+  }
+  &.camel .coin {
+    background-image: url("../../assets/c-c5.png");
+    > .coin-value > div {
+      background-color: #774b3d;
+      color: white;
+    }
+  }
+}

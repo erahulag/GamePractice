@@ -1,0 +1,66 @@
+.game-scoreboard {
+  font-size: 3vmin;
+  color: #484848;
+  background-image: url("../../assets/score.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 17vmin;
+  height: 20vmin;
+  display: grid;
+  grid-template-columns: 2fr 4fr 1fr 4fr 1fr 4fr 2fr;
+  grid-template-rows: 1fr 1fr 3fr 1fr 1fr 1fr 15fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". t3 . . . t5 ."
+    ". t3 . t4 . t5 ."
+    ". c3 . t4 . c5 ."
+    ". c3 . c4 . c5 ."
+    ". . . c4 . . ."
+    ". score score score score score .";
+  color: white;
+  text-shadow: #78909c;
+  zoom: 0.75;
+  position: fixed;
+  bottom: 1vmin;
+  right: 2vmin;
+}
+
+.coin-value-total {
+  grid-area: score;
+  text-shadow: 2px 2px gold;
+  font-size: 10vmin;
+}
+.mini-token {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 1px solid gold;
+  border-radius: 50%;
+  background-color: rgba(255, 215, 0, 0.4);
+}
+.t3-counter {
+  grid-area: t3;
+  background-image: url("../../assets/c-3.png");
+}
+
+.t4-counter {
+  grid-area: t4;
+  background-image: url("../../assets/c-4.png");
+}
+
+.t5-counter {
+  grid-area: t5;
+  background-image: url("../../assets/c-5.png");
+}
+.c3-counter {
+  grid-area: c3;
+}
+
+.c4-counter {
+  grid-area: c4;
+}
+.c5-counter {
+  grid-area: c5;
+}

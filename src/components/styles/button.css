@@ -1,0 +1,89 @@
+.player-moves {
+  display: flex;
+  height: 10vmin;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.player-moves > div {
+  position: absolute;
+  left: 0;
+}
+.deep-button {
+  border-radius: 50%;
+  width: 8vmin;
+  height: 8vmin;
+  font-family: Varela Round;
+  background-color: #9fa8da;
+  font-size: 1.5vmin;
+  color: #111b1b;
+  display: block;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0px #616161;
+  position: relative;
+  margin-left: 1vh;
+}
+
+.deep-button:active {
+  box-shadow: 0 2px 2px 0px #616161;
+  transform: translateY(4px) translateX(-1px);
+}
+
+.deep-button:disabled {
+  background-color: #999898;
+  box-shadow: -0px 2px 0px 0px #616161;
+  transform: translateY(1px) translateX(-1px);
+  cursor: not-allowed;
+  color: lightgray;
+}
+
+.deep-button.trade {
+  background-color: #f9a825;
+}
+
+.deep-button.trade:disabled {
+  background-color: #999898;
+}
+.verb-action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 1.7vmin;
+  height: 100%;
+  font-weight: bold;
+}
+.up-arc,
+.down-arc {
+  display: block;
+  height: 8vmin;
+  position: absolute;
+  top: 0.25vmin;
+}
+.down-arc {
+  top: -0.25vmin;
+}
+
+.up-letter {
+  display: block;
+  position: absolute;
+  transform-origin: 0 100%;
+  height: 4vmin;
+}
+.down-letter > span {
+  height: 1.5vmin;
+  position: absolute;
+  transform-origin: 50% 50%;
+  transform: translate(50%, 50%) rotate(180deg);
+}
+.down-letter {
+  display: block;
+  position: absolute;
+  transform-origin: 0 100%;
+  height: 4vmin;
+}

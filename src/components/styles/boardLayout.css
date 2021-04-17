@@ -1,0 +1,36 @@
+.vsplit {
+  height: 100%;
+  padding: 6px;
+}
+.hsplit {
+  width: 100%;
+  position: relative;
+}
+.top {
+  height: 50%;
+  /* border: solid; */
+  top: 0;
+  /*   background: yellow; */
+}
+.bottom {
+  height: 50%;
+  /* border: solid; */
+  top: 0;
+  /*   background: green; */
+}
+.left {
+  width: 28vmin;
+}
+.right {
+  width: 72vmin;
+}
+.playground {
+  display: flex;
+  flex-direction: column;
+}
+.droppable-area {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

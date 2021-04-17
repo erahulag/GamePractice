@@ -1,0 +1,83 @@
+.sidebar {
+  z-index: 50000;
+  position: absolute;
+  top: 34vh;
+  right: 0;
+  transition: width 0.4s;
+}
+.sidebar.open {
+  width: 76vw;
+}
+.sidebar.closed {
+  width: 4vh;
+}
+.sidebar.closed .sidebar-tab {
+  width: 100%;
+}
+.sidebar.closed .sidebar-content {
+  width: 0%;
+}
+.sidebar.open .sidebar-tab {
+  width: 4vw;
+}
+.sidebar.open .sidebar-content {
+  width: 72vw;
+}
+.sidebar-tab {
+  display: inline;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.4s;
+}
+.sidebar-content {
+  display: inline-flex;
+  float: left;
+  height: 100%;
+  /* background: rgba(203, 186, 131, 0.7); */
+  background: rgba(255, 255, 255, 0.8);
+  transition: width 0.4s;
+  border-radius: 1vh;
+}
+.icon-container {
+  margin: 0;
+  z-index: -1;
+  border-radius: 1vh;
+  width: 100%;
+  background: rgba(175, 142, 181, 0.7);
+  display: flex;
+  font-size: 2vh;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw 0px;
+}
+.icon-container h3 {
+  transform: rotate(-90deg);
+}
+.chatbox {
+  height: 100%;
+  overflow: auto;
+  margin-right: 1.5vh;
+  font-size: 1.6vh;
+}
+.chat-item {
+  margin: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.chat-item.not-me::before {
+  content: "Opponent: ";
+  text-decoration-style: double;
+}
+.chat-item.not-me {
+  text-align: right;
+  background: rgba(250, 178, 160, 0.6);
+}
+.chat-item.me::before {
+  content: "You: ";
+}
+.chat-item.me {
+  text-align: left;
+  background: rgba(211, 250, 160, 0.6);
+}
